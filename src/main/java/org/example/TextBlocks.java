@@ -2,7 +2,22 @@ package org.example;
 
 public class TextBlocks {
     // Text Blocks java 15 feature
-  private final  static String sqlQuery = """
+    private final  static  String htmlContentString = "<!DOCTYPE html>\n" +
+            "<html>\n" +
+            "<body>\n" +
+            "<h1>Hello, World!</h1>\n" +
+            "</body>\n" +
+            "</html>";
+
+    private final  static    String htmlContentTextBlock = """
+<!DOCTYPE html>
+<html>
+<body>
+<h1>Hello, World!</h1>
+</body>
+</html>
+""";
+  private final  static String sqlQueryTextBlock = """
   WITH ProductSales AS (
                                                               SELECT
                                                                   p.product_category,
@@ -56,6 +71,8 @@ public class TextBlocks {
 """;
 
     public static void main(String[] args) {
-        System.out.println(sqlQuery);
+        System.out.println("String HTML:-" + htmlContentString);
+        System.out.println("Text Block HTML:-" + htmlContentTextBlock);
+        System.out.println("Text Block sqlQueryTextBlock:-"+ sqlQueryTextBlock);
     }
 }
